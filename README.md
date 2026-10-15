@@ -1,53 +1,69 @@
-# [JUDUL]
+# 🐾 STOKAN – Sistem Toko Hewan untuk Manajemen Stok Aman
 
-## 📖 Deskripsi Singkat
-
-LOREM IPSUM DOLOR SIT ATMET
-
----
-
-## 👥 Daftar Anggota Kelompok
-
-| No | Nama | NIM | KOM | Lab |
-|----|------|-----|-----|-----|
-| 1  | Muhammad Iqbal Permata   | 261401043 | A | 1 |
-| 2  | Angello Ad Harvel Sitorus  | 261401053 | A | 1 |
-| 3  | Muhammad Affif  | 261401146 | A | 2 |
+> **Proyek UTS Laboratorium Dasar Pemrograman (DP1)**  
+> **Program Studi Ilmu Komputer — Universitas Sumatera Utara**
 
 ---
 
-## ✨ Fitur Utama
+## 📌 Ringkasan Proyek
 
-| No | Fitur | Deskripsi | Materi Pascal |
-|----|-------|-----------|---------------|
-| 1  | **Login Multi-Role** | Login dengan 3x percobaan, role: Admin, Dosen, Mahasiswa, Staff | `while-do`, `if-then-else` |
-| 2  | **Input Data Mahasiswa** | Input NIM, nama, prodi, semester | `repeat-until`, `readln`, record |
-| 3  | **Input Nilai Mata Kuliah** | Input nilai per MK, dengan STOP & skip nilai 0 | `repeat-until`, `break`, `continue` |
-| 4  | **Hitung IPK** | Hitung IPK otomatis dari nilai & SKS | `for-to-do`, `if-then-else`, `case-of` |
-| 5  | **Rekap KRS** | Tampilkan KRS lengkap dengan grade | `for-to-do` |
-| 6  | **Cek Pencapaian** | Predikat akademik & notifikasi nilai rendah | nested-if |
-| 7  | **Rekap Akademik** | Statistik keseluruhan mahasiswa | `for-to-do` |
-| 8  | **Menu per Role** | Menu berbeda sesuai hak akses | `case-of`, `repeat-until` |
+**STOKAN** (*Sistem Toko Hewan untuk Manajemen Stok Aman*) adalah program berbasis Pascal CLI (Command Line Interface) yang dirancang untuk mempermudah pemilik atau pengelola toko hewan (*pet shop*) dalam melakukan pencatatan, pemantauan, serta pembaruan stok barang/produk secara digital, terstruktur, dan efisien.
 
 ---
 
-## 🧠 Penjelasan Logika Singkat
+## 👥 Anggota Kelompok
 
-### 1. Login Multi-Role
-Program meminta username & password. Jika salah, percobaan
-dibatasi 3x menggunakan `while-do`. Jika berhasil, program
-menyimpan role user dan mengarahkan ke menu yang sesuai.
+**Nama Kelompok:** Kelompok ValuTech  
+**Kelas / Kom:** KOM A  
+**Program Studi:** Ilmu Komputer, Fasilkom-TI USU  
 
-```pascal
-while (percobaan < 3) and (not login) do
-begin
-  write('Username : '); readln(user.username);
-  write('Password : '); readln(user.password);
-  if (user.username = 'admin') and (user.password = 'admin123') then
-  begin
-    user.role := 'admin';
-    login := true;
-  end
-  else
-    inc(percobaan);
-end;
+| No | Nama | NIM | Peran / Kontribusi |
+|:--:|:---|:---:|:---|
+| 1 | **Muhammad Iqbal Permata** | `261401043` | Developer & Logic Handler |
+| 2 | **Angello Ad Harvel Sitorus** | `261401053` | Flow Control & Menu Interface |
+| 3 | **Muhammad Affif** | `261401146` | Data Structure & Documentation |
+
+---
+
+## ✨ Fitur Utama Program
+
+Program ini dilengkapi dengan berbagai fitur fungsional untuk mengelola persediaan barang:
+
+1. ➕ **Tambah Barang (`TambahBarang`)**
+   - Menambahkan data barang baru ke dalam sistem.
+   - Menginputkan kode unik barang, nama barang, jumlah ketersediaan stok, dan jenis satuan (misal: *kg, pak, botol, ekor*).
+2. 📋 **Lihat Barang (`LihatBarang`)**
+   - Menampilkan seluruh daftar barang yang tersimpan dalam format daftar yang rapi beserta kodenya.
+3. 🔄 **Update Stok (`UpdateStok`)**
+   - Mencari barang berdasarkan kode unik.
+   - Menampilkan jumlah stok saat ini dan memperbarui jumlah stok dengan data terbaru.
+4. 🧮 **Hitung Total Jumlah Stok (`HitungTotal`)**
+   - Mengalkulasi total keseluruhan kuantitas barang/stok yang ada di dalam toko secara otomatis.
+5. 🚪 **Keluar**
+   - Mengakhiri jalannya program secara aman.
+
+---
+
+## 🛠️ Konsep & Pemrograman Pascal yang Diterapkan
+
+Proyek ini telah mengintegrasikan syarat dan konsep materi Praktikum Dasar Pemrograman:
+
+- **Konsep Dasar & I/O:** Memanfaatkan perintah `write`, `writeln`, `readln`, serta pembersihan layar (`clrscr`).
+- **Tipe Data Bentukan (`Record` & `Array`):** Menggunakan `type TBarang = record` untuk mengelompokkan atribut barang dan `array[1..100] of TBarang` untuk menyimpan koleksi data.
+- **Struktur Pengkondisian:** Menggunakan `case-of` untuk navigasi menu interaktif dan `if-then` untuk pencarian kode barang.
+- **Struktur Perulangan:**
+  - `repeat-until` untuk menjaga alur program tetap berjalan interaktif hingga pengguna memilih menu keluar.
+  - `for-to-do` untuk iterasi pembacaan array saat menampilkan, memperbarui, atau menghitung total stok.
+- **Kontrol Peloncatan:** Penggunaan instruksi `exit` untuk menghentikan prosedur `UpdateStok` secara efisien setelah barang ditemukan.
+
+---
+
+## 🚀 Cara Menjalankan Program
+
+### Prasyarat
+- Kompilator Pascal seperti **Free Pascal Compiler (FPC)** atau IDE **Turbo Pascal / Lazarus / Dev-Pascal**.
+
+### Langkah-Langkah Execution
+1. *Clone* repositori ini atau unduh file source code `stokan.pas`:
+   ```bash
+   git clone [https://github.com/USERNAME_KAMU/UTS_Daspro_ValuTech_A.git](https://github.com/USERNAME_KAMU/UTS_Daspro_ValuTech_A.git)
