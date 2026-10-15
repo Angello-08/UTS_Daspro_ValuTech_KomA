@@ -17,11 +17,11 @@
 **Kelas / Kom:** KOM A  
 **Program Studi:** Ilmu Komputer, Fasilkom-TI USU  
 
-| No | Nama | NIM | Peran / Kontribusi |
+| No | Nama | NIM | Kom |
 |:--:|:---|:---:|:---|
-| 1 | **Muhammad Iqbal Permata** | `261401043` | Developer & Logic Handler |
-| 2 | **Angello Ad Harvel Sitorus** | `261401053` | Flow Control & Menu Interface |
-| 3 | **Muhammad Affif** | `261401146` | Data Structure & Documentation |
+| 1 | **Muhammad Iqbal Permata** | `261401043` | A |
+| 2 | **Angello Ad Harvel Sitorus** | `261401053` | A |
+| 3 | **Muhammad Affif** | `261401146` | A |
 
 ---
 
