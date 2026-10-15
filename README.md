@@ -58,12 +58,3 @@ Proyek ini telah mengintegrasikan syarat dan konsep materi Praktikum Dasar Pemro
 
 ---
 
-## 🚀 Cara Menjalankan Program
-
-### Prasyarat
-- Kompilator Pascal seperti **Free Pascal Compiler (FPC)** atau IDE **Turbo Pascal / Lazarus / Dev-Pascal**.
-
-### Langkah-Langkah Execution
-1. *Clone* repositori ini atau unduh file source code `stokan.pas`:
-   ```bash
-   git clone [https://github.com/USERNAME_KAMU/UTS_Daspro_ValuTech_A.git](https://github.com/USERNAME_KAMU/UTS_Daspro_ValuTech_A.git)
